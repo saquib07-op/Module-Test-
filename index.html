@@ -1,0 +1,467 @@
+<style>
+    .new-employees-section {
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: start;
+      padding: 96px 58px;
+    }
+  
+    .employee-form {
+      display: flex;
+      width: 100%;
+      max-width: 1243px;
+      align-items: flex-end;
+      gap: 20px;
+      font-family: Inter, sans-serif;
+      color: #fff;
+      font-weight: 400;
+      justify-content: space-between;
+    }
+  
+    .form-header {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .input-label {
+      font-size: 18px;
+      align-self: start;
+      margin-top: 48px;
+    }
+  
+    .input-wrapper {
+      display: flex;
+      margin-top: 23px;
+      width: 100%;
+      max-width: 1613px;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .form-input {
+      border-radius: 5px;
+      width: 100%;
+      height: 56px;
+      border: 1px solid #fff;
+      background-color: transparent;
+      color: #fff;
+      padding: 0 10px;
+    }
+  
+    .submit-button {
+      background-color: #fff;
+      margin-top: 39px;
+      color: #000;
+      text-align: center;
+      padding: 12px 62px;
+      font: 300 24px Inter, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .added-employees-title {
+      color: #fff;
+      margin-top: 70px;
+      font: 400 24px Inter, sans-serif;
+    }
+  
+    .employee-count {
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 39px;
+      font: 400 24px Inter, sans-serif;
+    }
+  
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  
+    @media (max-width: 991px) {
+      .new-employees-section {
+        padding: 0 20px 100px;
+      }
+  
+      .input-label {
+        margin-top: 40px;
+      }
+  
+      .submit-button {
+        padding: 12px 20px;
+      }
+  
+      .added-employees-title {
+        margin-top: 40px;
+      }
+    }
+  </style>
+  
+  <section class="new-employees-section">
+    <form class="employee-form">
+      <header class="form-header">
+        <h2 class="section-title">New Employees</h2>
+        <label for="name-input" class="input-label">Enter Name</label>
+      </header>
+      <label for="profession-input" class="input-label">Enter Profession</label>
+      <label for="age-input" class="input-label">Enter Age</label>
+    </form>
+    
+    <div class="input-wrapper">
+      <input type="text" id="name-input" class="form-input" aria-label="Enter Name">
+      <input type="text" id="profession-input" class="form-input" aria-label="Enter Profession">
+      <input type="number" id="age-input" class="form-input" aria-label="Enter Age">
+    </div>
+    
+    <button type="submit" class="submit-button">Add User</button>
+    
+    <h3 class="added-employees-title">Added Employees</h3>
+    <p class="employee-count">You have 0 Employees.</p>
+  </section>
+
+
+
+
+<style>
+    .new-employees-section {
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: start;
+      padding: 96px 58px;
+      font-family: Inter, sans-serif;
+      color: #fff;
+    }
+    
+    .employee-form {
+      display: flex;
+      width: 100%;
+      max-width: 1243px;
+      align-items: end;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .form-group {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .section-title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    
+    .input-label {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 48px;
+    }
+    
+    .input-fields {
+      display: flex;
+      margin-top: 23px;
+      width: 100%;
+      max-width: 1613px;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .input-field {
+      border-radius: 5px;
+      width: 531px;
+      max-width: 100%;
+      height: 56px;
+      border: 1px solid #fff;
+    }
+    
+    .input-field-age {
+      width: 451px;
+    }
+    
+    .submit-button {
+      background-color: #fff;
+      margin-top: 39px;
+      color: #000;
+      text-align: center;
+      padding: 12px 62px;
+      font-size: 24px;
+      font-weight: 300;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .error-message {
+      color: #ff4343;
+      margin-top: 48px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    
+    .added-employees-title {
+      margin-top: 48px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    
+    .employee-count {
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 39px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .new-employees-section {
+        padding: 0 20px 100px;
+      }
+    
+      .input-label {
+        margin-top: 40px;
+      }
+    
+      .submit-button {
+        padding: 12px 20px;
+      }
+    
+      .error-message,
+      .added-employees-title {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="new-employees-section">
+      <h2 class="section-title">New Employees</h2>
+      <form class="employee-form">
+        <div class="form-group">
+          <label for="employee-name" class="input-label">Enter Name</label>
+          <label for="employee-profession" class="input-label">Enter Profession</label>
+          <label for="employee-age" class="input-label">Enter Age</label>
+        </div>
+        <div class="input-fields">
+          <input type="text" id="employee-name" class="input-field" aria-label="Enter Name">
+          <input type="text" id="employee-profession" class="input-field" aria-label="Enter Profession">
+          <input type="number" id="employee-age" class="input-field input-field-age" aria-label="Enter Age">
+        </div>
+        <button type="submit" class="submit-button">Add User</button>
+      </form>
+      <p class="error-message" role="alert">Error : Please Make sure All the fields are filled before adding in an employee !</p>
+      <h3 class="added-employees-title">Added Employees</h3>
+      <p class="employee-count">You have 0 Employees.</p>
+    </section>
+
+
+    <style>
+        .new-employees-section {
+          background-color: #000;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          align-items: start;
+          font-family: Inter, sans-serif;
+          padding: 96px 58px 406px;
+        }
+        .employee-form {
+          display: flex;
+          width: 100%;
+          max-width: 1243px;
+          align-items: end;
+          gap: 20px;
+          color: #fff;
+          font-weight: 400;
+          justify-content: space-between;
+        }
+        .form-group {
+          align-self: start;
+          display: flex;
+          flex-direction: column;
+        }
+        .section-title {
+          font-size: 24px;
+        }
+        .form-label {
+          font-size: 18px;
+          align-self: start;
+          margin-top: 48px;
+        }
+        .form-input {
+          border-radius: 5px;
+          padding: 16px 13px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          color: #fff;
+          font-size: 18px;
+        }
+        .add-user-btn {
+          background-color: #fff;
+          margin-top: 39px;
+          font-size: 24px;
+          color: #000;
+          font-weight: 300;
+          text-align: center;
+          padding: 12px 62px;
+          border: none;
+          cursor: pointer;
+        }
+        .success-message {
+          color: #43ff78;
+          font-size: 24px;
+          font-weight: 400;
+          margin-top: 48px;
+        }
+        .added-employees-title {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 400;
+          margin-top: 48px;
+        }
+        .employee-list {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          margin-top: 48px;
+        }
+        .employee-item {
+          display: flex;
+          gap: 27px;
+          font-size: 18px;
+          flex-wrap: wrap;
+        }
+        .employee-details {
+          border-radius: 10px;
+          display: flex;
+          gap: 40px 44px;
+          color: #fff;
+          font-weight: 400;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          flex-basis: auto;
+          padding: 16px 13px 25px;
+          border: 1px solid #fff;
+        }
+        .delete-user-btn {
+          border-radius: 20px;
+          background-color: #fff;
+          color: #000;
+          font-weight: 300;
+          text-align: center;
+          margin: auto 0;
+          padding: 8px 33px;
+          border: none;
+          cursor: pointer;
+        }
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        @media (max-width: 991px) {
+          .new-employees-section {
+            padding: 0 20px 100px;
+          }
+          .employee-form {
+            max-width: 100%;
+          }
+          .form-label {
+            margin-top: 40px;
+          }
+          .form-input {
+            max-width: 100%;
+            padding: 16px 20px;
+          }
+          .add-user-btn {
+            padding: 12px 20px;
+          }
+          .success-message,
+          .added-employees-title {
+            margin-top: 40px;
+          }
+          .employee-list {
+            margin-top: 40px;
+          }
+        }
+      </style>
+      
+      <section class="new-employees-section">
+        <form class="employee-form">
+          <div class="form-group">
+            <h2 class="section-title">New Employees</h2>
+            <label for="name" class="form-label">Enter Name</label>
+          </div>
+          <div class="form-group">
+            <label for="profession" class="form-label">Enter Profession</label>
+          </div>
+          <div class="form-group">
+            <label for="age" class="form-label">Enter Age</label>
+          </div>
+        </form>
+        
+        <div class="employee-form">
+          <input type="text" id="name" class="form-input" placeholder="Jack" aria-label="Enter Name">
+          <input type="text" id="profession" class="form-input" placeholder="Developer" aria-label="Enter Profession">
+          <input type="number" id="age" class="form-input" placeholder="20" aria-label="Enter Age">
+        </div>
+        
+        <button class="add-user-btn">Add User</button>
+        
+        <p class="success-message">Success : Employee Added!</p>
+        
+        <h3 class="added-employees-title">Added Employees</h3>
+        
+        <ul class="employee-list">
+          <li class="employee-item">
+            <div class="employee-details">
+              <span>1.</span>
+              <span>Name : John</span>
+              <span>Profession: Developer</span>
+              <span>Age:18</span>
+            </div>
+            <button class="delete-user-btn">Delete User</button>
+          </li>
+          <li class="employee-item">
+            <div class="employee-details">
+              <span>2</span>
+              <span>Name : Jack</span>
+              <span>Profession: Developer</span>
+              <span>Age:20</span>
+            </div>
+            <button class="delete-user-btn">Delete User</button>
+          </li>
+        </ul>
+      </section>
